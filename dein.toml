@@ -1,0 +1,20 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]] # コード補完
+repo = 'Shougo/neocomplete.vim'
+
+[[plugins]] # 静的解析
+repo = 'scrooloose/syntastic'
+
+[[plugins]] # ドキュメント参照
+repo = 'thinca/vim-ref'
+
+[[plugins]] # メソッドの定義元へジャンプ
+repo = 'szw/vim-tags'
+
+[[plugins]] # 自動で閉じる
+repo = 'tpope/vim-endwise'
+
+[[plugins]] # html
+repo = 'mattn/emmet-vim'
