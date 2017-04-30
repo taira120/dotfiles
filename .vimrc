@@ -94,8 +94,10 @@ inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
-inoremap <C-d> <Delete>
-inoremap <C-f> <BS>
+inoremap <C-f> <Delete>
+inoremap <C-d> <BS>
+inoremap <C-e> <esc>$a
+inoremap <C-a> <esc><C-0>i
 noremap <S-h> <C-0>
 noremap <S-l> $
 noremap <CR> A<CR><ESC>
