@@ -18,3 +18,6 @@ repo = 'tpope/vim-endwise'
 
 [[plugins]] # html
 repo = 'mattn/emmet-vim'
+
+[[plugins]] # show indent level
+repo = 'Yggdroot/indentLine'
