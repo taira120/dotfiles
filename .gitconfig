@@ -1,0 +1,11 @@
+[push]
+	default = current
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  br = branch
+  df = diff
+[user]
+  name = taira120
+  email = taira1999120@gmail.com

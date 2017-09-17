@@ -20,4 +20,11 @@ repo = 'tpope/vim-endwise'
 repo = 'mattn/emmet-vim'
 
 [[plugins]] # show indent level
-repo = 'Yggdroot/indentLine'
+repo = 'nathanaelkane/vim-indent-guides'
+
+
+[[plugins]] # file system explorer
+repo = 'scrooloose/nerdtree'
+
+[[plugins]] # vim motion on speed
+repo = 'easymotion/vim-easymotion'
