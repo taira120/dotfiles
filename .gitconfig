@@ -1,12 +1,12 @@
 [push]
 	default = current
 [alias]
-  st = status
-  ci = commit
+  s = status
+  c = commit -m
   co = checkout
   br = branch
   df = diff
-  pu = push
+  p = push
 [user]
   name = taira120
   email = taira1999120@gmail.com
