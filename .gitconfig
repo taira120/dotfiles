@@ -1,6 +1,7 @@
 [push]
 	default = current
 [alias]
+  a = add
   s = status
   c = commit -m
   co = checkout
