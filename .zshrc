@@ -10,7 +10,7 @@ export ZSH=/Users/taira/.oh-my-zsh
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -84,17 +84,33 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+########
+# util #
+########
+bindkey -v
+
 ######### 
 # alias #
 #########
-
 alias v="vim"
 alias g="git" 
 alias p="push"
 alias r="rails"
-alias ls='colorls -a'
+alias ls="colorls -a -sd"
 
 ################
 # Powerlevel9k #
 ################
 POWERLEVEL9K_MODE='nerdfont-complete'
+
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_SHORTEN_STRATEGY='truncate_from_right'
+POWERLEVEL9K_SHORTEN_DELIMITER='..'
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
+POWERLEVEL9K_CUSTOM_MAC_ICON="echo $(echo "\uF179")"
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
+#POWERLEEL9K_CUSTOM_MAC_ICON_FOREGROUND='blue'
+
+POWERLEVEL9K_TIME_FORMAT="%D{%H:%M %m\/%d}"
+
