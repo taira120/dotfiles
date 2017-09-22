@@ -6,6 +6,7 @@
   co = checkout
   br = branch
   df = diff
+  pu = push
 [user]
   name = taira120
   email = taira1999120@gmail.com
