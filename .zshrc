@@ -96,7 +96,7 @@ alias v="vim"
 alias g="git" 
 alias p="push"
 alias r="rails"
-alias ls="colorls -a -sd"
+alias lc="colorls -a -sd"
 
 ################
 # Powerlevel9k #
