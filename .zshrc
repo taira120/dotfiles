@@ -1,3 +1,4 @@
+export TERM="xterm-256color"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -10,7 +11,7 @@ export ZSH=/Users/taira/.oh-my-zsh
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Uncomment the following line to use case-sensitive completion.
-CASE_SENSITIVE="true"
+# CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -103,9 +104,9 @@ alias lc="colorls -a -sd"
 ################
 POWERLEVEL9K_MODE='nerdfont-complete'
 
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=5
-POWERLEVEL9K_SHORTEN_STRATEGY='truncate_from_right'
-POWERLEVEL9K_SHORTEN_DELIMITER="..."
+# POWERLEVEL9K_SHORTEN_DIR_LENGTH=5
+# POWERLEVEL9K_SHORTEN_STRATEGY='truncate_from_right'
+# POWERLEVEL9K_SHORTEN_DELIMITER="..."
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time dir vcs)
 POWERLEVEL9K_CUSTOM_MAC_ICON="echo $(echo "\uF179")"
