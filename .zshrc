@@ -1,4 +1,5 @@
 export TERM="xterm-256color"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/taira/.pyenv/shims"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -98,6 +99,7 @@ alias g="git"
 alias p="push"
 alias r="rails"
 alias lc="colorls -a -sd"
+alias wo="cd ~/workspace"
 
 ################
 # Powerlevel9k #

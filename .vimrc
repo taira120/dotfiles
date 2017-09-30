@@ -60,7 +60,7 @@ let g:user_emmet_settings = {
 " easymotion
 " --------------------------------
 let g:EasyMotion_do_mapping = 0 "Disable default mappings
-nmap <C-v> <Plug>(easymotion-s2)
+nmap <C-m> <Plug>(easymotion-s2)
 
 " --------------------------------
 " vim-indent-guides
