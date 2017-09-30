@@ -100,6 +100,7 @@ alias p="push"
 alias r="rails"
 alias lc="colorls -a -sd"
 alias wo="cd ~/workspace"
+alias t="tmux"
 
 ################
 # Powerlevel9k #
