@@ -12,3 +12,5 @@
 [user]
   name = taira120
   email = taira1999120@gmail.com
+[core]
+	excludesfile = /Users/taira/.gitignore_global
