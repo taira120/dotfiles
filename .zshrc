@@ -1,5 +1,5 @@
 export TERM="xterm-256color"
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/taira/.pyenv/shims"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/taira/.pyenv/shims:/Users/taira/.nimble/bin"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -106,6 +106,8 @@ alias rub="rubocop"
 alias ruba="rubocop --auto-correct"
 alias ridd="rails ridgepole:dry"
 alias rida="rails ridgepole:apply"
+alias vz="v .zshrc"
+alias n="nim c -r"
 
 ################
 # Powerlevel9k #
