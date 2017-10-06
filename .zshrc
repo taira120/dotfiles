@@ -101,6 +101,11 @@ alias r="rails"
 alias lc="colorls -a -sd"
 alias wo="cd ~/workspace"
 alias t="tmux"
+alias d="docker"
+alias rub="rubocop"
+alias ruba="rubocop --auto-correct"
+alias ridd="rails ridgepole:dry"
+alias rida="rails ridgepole:apply"
 
 ################
 # Powerlevel9k #
