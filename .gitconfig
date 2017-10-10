@@ -5,6 +5,7 @@
   s = status
   c = commit -m
   co = checkout
+  com = checkout master
   br = branch
   df = diff
   p = push
