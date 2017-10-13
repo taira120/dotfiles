@@ -104,10 +104,11 @@ alias t="tmux"
 alias d="docker"
 alias rub="rubocop"
 alias ruba="rubocop --auto-correct"
-alias ridd="rails ridgepole:dry"
+alias rid="rails ridgepole:dry"
 alias rida="rails ridgepole:apply"
 alias vz="v .zshrc"
 alias n="nim c -r"
+alias ras="ssh pi@192.168.100.10"
 
 ################
 # Powerlevel9k #
