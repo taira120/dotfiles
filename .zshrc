@@ -1,5 +1,5 @@
 export TERM="xterm-256color"
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/taira/.pyenv/shims:/Users/taira/.nimble/bin"
+export PATH="/Users/taira/.yarn/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/taira/.pyenv/shims:/Users/taira/.nimble/bin"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
