@@ -39,3 +39,7 @@ Thumbs.db
 # IntelliJ #
 ############
 .idea/
+
+# Vim #
+#######
+.swp

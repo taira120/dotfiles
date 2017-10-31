@@ -9,7 +9,7 @@
   br = branch
   df = diff
   p = push
-  pl = pull
+  pl = pull origin master
 [user]
   name = taira120
   email = taira1999120@gmail.com

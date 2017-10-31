@@ -60,7 +60,7 @@ let g:user_emmet_settings = {
 " easymotion
 " --------------------------------
 let g:EasyMotion_do_mapping = 0 "Disable default mappings
-nmap <C-m> <Plug>(easymotion-s2)
+nmap <C-i> <Plug>(easymotion-s2)
 
 " --------------------------------
 " vim-indent-guides
@@ -70,6 +70,13 @@ nmap <C-m> <Plug>(easymotion-s2)
 " NERDTree
 " --------------------------------
 map <C-n> :NERDTreeToggle<CR>
+
+" --------------------------------
+" auto-ctags
+" --------------------------------
+let g:auto_ctags = 1
+let g:auto_ctags_directory_list = ['.git', '.svn']
+set tags=.git/tags
 
 " --------------------------------
 " 基本設定
@@ -101,6 +108,7 @@ set backspace=indent,eol,start
 " ファイル形式別プラグインのロードを有効化する
 " ファイル形式別インデントのロードを有効化する
 filetype plugin indent on
+autocmd BufRead,BufNewFile *.vue set filetype=html
 
 " --------------------------------
 " key map 

@@ -109,6 +109,7 @@ alias rida="rails ridgepole:apply"
 alias vz="v .zshrc"
 alias n="nim c -r"
 alias ras="ssh pi@192.168.100.10"
+alias gp="g p"
 
 ################
 # Powerlevel9k #

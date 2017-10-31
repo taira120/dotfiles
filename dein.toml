@@ -28,3 +28,6 @@ repo = 'scrooloose/nerdtree'
 
 [[plugins]] # vim motion on speed
 repo = 'easymotion/vim-easymotion'
+
+[[plugins]] # A sugoi benri ctags
+repo = 'soramugi/auto-ctags.vim'
