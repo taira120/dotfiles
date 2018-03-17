@@ -1,17 +1,11 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-[[plugins]] # コード補完
-repo = 'Shougo/neocomplete.vim'
-
 [[plugins]] # 静的解析
 repo = 'scrooloose/syntastic'
 
 [[plugins]] # ドキュメント参照
 repo = 'thinca/vim-ref'
-
-[[plugins]] # メソッドの定義元へジャンプ
-repo = 'szw/vim-tags'
 
 [[plugins]] # 自動で閉じる
 repo = 'tpope/vim-endwise'
@@ -20,8 +14,7 @@ repo = 'tpope/vim-endwise'
 repo = 'mattn/emmet-vim'
 
 [[plugins]] # show indent level
-repo = 'nathanaelkane/vim-indent-guides'
-
+repo = 'Yggdroot/indentLine'
 
 [[plugins]] # file system explorer
 repo = 'scrooloose/nerdtree'
@@ -29,5 +22,23 @@ repo = 'scrooloose/nerdtree'
 [[plugins]] # vim motion on speed
 repo = 'easymotion/vim-easymotion'
 
-[[plugins]] # A sugoi benri ctags
-repo = 'soramugi/auto-ctags.vim'
+[[plugins]]
+repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'kana/vim-textobj-user'
+
+[[plugins]]
+repo = 'nelstrom/vim-textobj-rubyblock'
+
+[[plugins]]
+repo = 'JuliaEditorSupport/julia-vim'
+
+[[plugins]]
+repo = 'dart-lang/dart-vim-plugin'
+
+[[plugins]]
+repo = 'zchee/deoplete-clang'
+
+[[plugins]]
+repo = 'Shougo/neco-syntax'

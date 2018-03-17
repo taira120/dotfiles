@@ -5,13 +5,16 @@
   s = status
   c = commit -m
   co = checkout
+  cob = checkout -b
   com = checkout master
+  cof = checkout feature/dev
   br = branch
   df = diff
   p = push
-  pl = pull origin master
+  pl = pull
 [user]
   name = taira120
   email = taira1999120@gmail.com
 [core]
 	excludesfile = /Users/taira/.gitignore_global
+	editor = nvim

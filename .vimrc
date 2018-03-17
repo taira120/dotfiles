@@ -17,10 +17,12 @@ if !isdirectory(s:dein_repo_dir)
 endif
 let &runtimepath = s:dein_repo_dir .",". &runtimepath
 " プラグイン読み込み＆キャッシュ作成
-let s:toml_file = fnamemodify(expand('<sfile>'), ':h').'/dotfiles/dein.toml'
+let s:toml_file = '~/.dein.toml'
+let s:lazy_toml_file = '~/.dein_lazy.toml'
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
   call dein#load_toml(s:toml_file)
+  call dein#load_toml(s:lazy_toml_file, {'lazy': 1})
   call dein#end()
   call dein#save_state()
 endif
@@ -31,15 +33,6 @@ endif
 
 " refeコマンドのパス
 let g:ref_refe_cmd = $HOME . '/.rbenv/shims/refe'
-
-" --------------------------------
-" neocomplete
-" --------------------------------
-let g:neocomplete#enable_at_startup = 1
-if !exists('g:neocomplete#force_omni_input_patterns')
-  let g:neocomplete#force_omni_input_patterns = {}
-endif
-let g:neocomplete#force_omni_input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 
 " --------------------------------
 " rubocop
@@ -60,35 +53,58 @@ let g:user_emmet_settings = {
 " easymotion
 " --------------------------------
 let g:EasyMotion_do_mapping = 0 "Disable default mappings
-nmap <C-i> <Plug>(easymotion-s2)
-
-" --------------------------------
-" vim-indent-guides
-" --------------------------------
+nmap <Leader>s <Plug>(easymotion-overwin-f2)
 
 " --------------------------------
 " NERDTree
 " --------------------------------
-map <C-n> :NERDTreeToggle<CR>
+noremap <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+autocmd vimenter * NERDTree
 
 " --------------------------------
-" auto-ctags
+" deoplete
 " --------------------------------
-let g:auto_ctags = 1
-let g:auto_ctags_directory_list = ['.git', '.svn']
-set tags=.git/tags
+let g:deoplete#enable_at_startup = 1
+
+" --------------------------------
+" deoplete-clang
+" --------------------------------
+let g:deoplete#sources#clang#libclang_path = '/usr/local/Cellar/llvm/6.0.0/lib/libclang.dylib'
+let g:deoplete#sources#clang#clang_header  = '/usr/local/Cellar/llvm/6.0.0/lib/clang'
+
+" --------------------------------
+" vim-textobj-ruby-block
+" --------------------------------
+runtime macros/matchit.vim
 
 " --------------------------------
 " 基本設定
 " --------------------------------
+" set lang to English
+language en_US
+
 " vim内部で使われる文字エンコーディングをutf-8に設定する
 set encoding=utf-8
+
+" ignore case
+set ignorecase
+
+" dont highlight words
+set nohlsearch
 
 " 想定される改行コードの指定する
 set fileformats=unix,dos,mac
 
+" set <Space> as <Leader>
+nnoremap <SPACE> <Nop>
+map <SPACE> <leader>
+
 " ハイライトを有効化する
 syntax enable
+
+" set color scheme
+let g:hybrid_custom_term_colors = 1
 
 " 行番号を表示する
 set number
@@ -109,29 +125,40 @@ set backspace=indent,eol,start
 " ファイル形式別インデントのロードを有効化する
 filetype plugin indent on
 autocmd BufRead,BufNewFile *.vue set filetype=html
+autocmd BufRead,BufNewFile *.schema set filetype=ruby
+autocmd BufRead,BufNewFile *.ts set filetype=javascript
 
 " --------------------------------
 " key map 
 " --------------------------------
 inoremap <C-j> <Down>
-inoremap <C-k> <Up>
+inoremap <C-k> <C-o>k
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 inoremap <C-f> <Delete>
 inoremap <C-d> <BS>
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o><C-0>
-inoremap <C-s> <C-[>:w<CR>
 inoremap { {}<Left>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap ( ()<ESC>i
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
-noremap <S-h> <C-0>
-noremap <S-l> $
-noremap <CR> A<CR><ESC>
-noremap == gg=G
-nnoremap <C-s> <C-[>:w<CR>
+nnoremap <C-s> :%s/
 nnoremap j gj
 nnoremap k gk
 nnoremap gj j
 nnoremap gk k
+nnoremap s <Nop>
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
+nnoremap sh <C-w>h
+nnoremap ; :
+nnoremap : ;
+nnoremap <S-h> <C-0>
+nnoremap <S-l> $
+nnoremap <CR> A<CR><ESC>
+nnoremap == gg=G
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>wq :wq<CR>

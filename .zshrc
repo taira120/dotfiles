@@ -1,90 +1,17 @@
 export TERM="xterm-256color"
-export PATH="/Users/taira/.yarn/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/taira/.pyenv/shims:/Users/taira/.nimble/bin"
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="/usr/local/opt/llvm/bin:/usr/local/opt/python/libexec/bin:/Users/taira/.rbenv/bin:/Users/taira/.yarn/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/taira/.pyenv/shims:/Users/taira/.nimble/bin:/Users/taira/Library/Python/2.7/bin:/Users/taira/dotfiles/.tmux/bin:/usr/local/Cellar/openvpn/2.4.4/sbin"
+eval "$(rbenv init -)"
+export XDG_CONFIG_HOME=$HOME/.config
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/taira/.oh-my-zsh
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+export LANG=en_US.UTF-8
 
 ########
 # util #
@@ -94,34 +21,57 @@ bindkey -v
 ######### 
 # alias #
 #########
-alias v="vim"
+alias v="nvim"
 alias g="git" 
-alias p="push"
-alias r="rails"
-alias lc="colorls -a -sd"
-alias wo="cd ~/workspace"
+alias gp="g push"
 alias t="tmux"
+alias dcres="dc down && dc up"
+alias vz="v ~/.zshrc"
+alias vv="v ~/.vimrc"
+alias n="nim c -r"
+alias j="/Applications/Julia-0.6.app/Contents/Resources/julia/bin/julia"
+alias ras="ssh pi@192.168.100.10"
+alias jn="jupyter notebook"
+
+# source
+alias soen="source ./env.sh"
+alias sozh="source /Users/taira/.zshrc"
+
+# ls
+alias ls="colorls -a -sd"
+alias l1="ls -1"
+alias ll="ls -l"
+
+# docker
 alias d="docker"
+alias dc="docker-compose"
+
+# ruby
+alias r="rails"
+alias b="bundle"
+alias be="bundle exec"
+alias caps="bundle exec cap staging deploy"
+alias capp="bundle exec cap production deploy"
 alias rub="rubocop"
 alias ruba="rubocop --auto-correct"
 alias rid="rails ridgepole:dry"
 alias rida="rails ridgepole:apply"
-alias vz="v .zshrc"
-alias n="nim c -r"
-alias ras="ssh pi@192.168.100.10"
-alias gp="g p"
+alias rap="rails assets:precompile"
+
+# cd
+alias cdn="cd ~/workspace/twogate/nomad/server && soen"
+alias cdr="cd ~/workspace/cho_kure_web"
+alias cds="cd ~/workspace/twogate/smatch/server && soen"
+alias cdi="cd ~/workspace/inoken"
+alias cdk="cd ~/workspace/kure_open_college_network_hp"
 
 ################
 # Powerlevel9k #
 ################
+ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='nerdfont-complete'
 
-# POWERLEVEL9K_SHORTEN_DIR_LENGTH=5
-# POWERLEVEL9K_SHORTEN_STRATEGY='truncate_from_right'
-# POWERLEVEL9K_SHORTEN_DELIMITER="..."
-
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time dir vcs)
-POWERLEVEL9K_CUSTOM_MAC_ICON="echo $(echo "\uF179")"
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 POWERLEVEL9K_DISABLE_RPROMPT=true
 
