@@ -34,6 +34,12 @@ endif
 " refeコマンドのパス
 let g:ref_refe_cmd = $HOME . '/.rbenv/shims/refe'
 
+" f**kin python2のパス
+let g:python_host_prog= system('(echo -n "/Users/taira/.pyenv/versions/2.7.14/bin/python")')
+
+" python3のパス
+let g:python3_host_prog= system('(echo -n "/Users/taira/.pyenv/versions/$(pyenv global)/bin/python")')
+
 " --------------------------------
 " rubocop
 " --------------------------------
@@ -139,10 +145,7 @@ inoremap <C-f> <Delete>
 inoremap <C-d> <BS>
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o><C-0>
-inoremap { {}<Left>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
-inoremap ( ()<ESC>i
-inoremap (<Enter> ()<Left><CR><ESC><S-o>
 nnoremap <C-s> :%s/
 nnoremap j gj
 nnoremap k gk
