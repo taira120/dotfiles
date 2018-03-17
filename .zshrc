@@ -1,4 +1,3 @@
-export TERM="xterm-256color"
 export PATH="/usr/local/opt/llvm/bin:/usr/local/opt/python/libexec/bin:/Users/taira/.rbenv/bin:/Users/taira/.yarn/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/taira/.pyenv/shims:/Users/taira/.nimble/bin:/Users/taira/Library/Python/2.7/bin:/Users/taira/dotfiles/.tmux/bin:/usr/local/Cellar/openvpn/2.4.4/sbin"
 eval "$(rbenv init -)"
 export XDG_CONFIG_HOME=$HOME/.config
