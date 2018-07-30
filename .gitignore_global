@@ -43,3 +43,7 @@ Thumbs.db
 # Vim #
 #######
 .swp
+
+# rbenv #
+#########
+.ruby-version

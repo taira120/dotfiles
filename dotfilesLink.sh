@@ -3,9 +3,10 @@ ln -sf ~/dotfiles/.vim ~/.vim
 ln -sf ~/dotfiles/indent ~/.vim
 ln -sf ~/dotfiles/.bash_profile ~/.bash_profile
 ln -sf ~/dotfiles/.virtualenv ~/.virtualenv
-ln -sf ~/dotfiles/.gitconfig ~/.gitconfig 
-ln -sf ~/dotfiles/.zshrc ~/.zshrc 
+ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/.gitignore_global ~/.gitignore_global
 ln -sf ~/dotfiles/.dein.toml ~/.dein.toml
 ln -sf ~/dotfiles/.dein_lazy.toml ~/.dein_lazy.toml
+ln -sf ~/dotfiles/.editorconfig ~/.editorconfig

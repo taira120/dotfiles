@@ -17,13 +17,14 @@ export LANG=en_US.UTF-8
 ########
 bindkey -v
 
-######### 
+#########
 # alias #
 #########
 alias v="nvim"
-alias g="git" 
+alias g="git"
 alias gp="g push"
 alias t="tmux"
+alias y="yarn"
 alias dcres="dc down && dc up"
 alias vz="v ~/.zshrc"
 alias vv="v ~/.vimrc"
@@ -31,15 +32,16 @@ alias n="nim c -r"
 alias j="/Applications/Julia-0.6.app/Contents/Resources/julia/bin/julia"
 alias ras="ssh pi@192.168.100.10"
 alias jn="jupyter notebook"
+alias mr="cd ../build && make run && cd ../ruby"
 
 # source
 alias soen="source ./env.sh"
 alias sozh="source /Users/taira/.zshrc"
 
 # ls
-alias ls="colorls -a -sd"
-alias l1="ls -1"
-alias ll="ls -l"
+alias l="colorls -a -sd"
+alias l1="l -1"
+alias ll="l -l"
 
 # docker
 alias d="docker"
@@ -56,6 +58,7 @@ alias ruba="rubocop --auto-correct"
 alias rid="rails ridgepole:dry"
 alias rida="rails ridgepole:apply"
 alias rap="rails assets:precompile"
+alias gr="grep --exclude-dir=tmp --exclude-dir=log --exclude-dir=public"
 
 # cd
 alias cdn="cd ~/workspace/twogate/nomad/server && soen"
@@ -63,6 +66,7 @@ alias cdr="cd ~/workspace/cho_kure_web"
 alias cds="cd ~/workspace/twogate/smatch/server && soen"
 alias cdi="cd ~/workspace/inoken"
 alias cdk="cd ~/workspace/kure_open_college_network_hp"
+alias cdt="cd ~/workspace/tsukuba/aoj"
 
 ################
 # Powerlevel9k #
@@ -86,3 +90,5 @@ POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="\u25B8 "
 
 POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=''
 POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=''
+
+source ~/notifyre.sh

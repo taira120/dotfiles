@@ -66,7 +66,7 @@ nmap <Leader>s <Plug>(easymotion-overwin-f2)
 " --------------------------------
 noremap <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
-autocmd vimenter * NERDTree
+autocmd VimEnter * NERDTree
 
 " --------------------------------
 " deoplete
@@ -132,10 +132,12 @@ set backspace=indent,eol,start
 filetype plugin indent on
 autocmd BufRead,BufNewFile *.vue set filetype=html
 autocmd BufRead,BufNewFile *.schema set filetype=ruby
+autocmd BufRead,BufNewFile *.ruby set filetype=ruby
 autocmd BufRead,BufNewFile *.ts set filetype=javascript
+autocmd BufRead,BufNewFile *.tsx,*.jsx set filetype=typescript.jsx
 
 " --------------------------------
-" key map 
+" key map
 " --------------------------------
 inoremap <C-j> <Down>
 inoremap <C-k> <C-o>k
@@ -146,6 +148,8 @@ inoremap <C-d> <BS>
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o><C-0>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<TAB>"
 nnoremap <C-s> :%s/
 nnoremap j gj
 nnoremap k gk
@@ -156,12 +160,16 @@ nnoremap sj <C-w>j
 nnoremap sk <C-w>k
 nnoremap sl <C-w>l
 nnoremap sh <C-w>h
+nnoremap <C-l>   :tabnext<CR>
+nnoremap <C-h> :tabprevious<CR>
+nnoremap <C-w> :tabclose<CR>
 nnoremap ; :
 nnoremap : ;
 nnoremap <S-h> <C-0>
 nnoremap <S-l> $
-nnoremap <CR> A<CR><ESC>
+nnoremap <CR> o<ESC>
 nnoremap == gg=G
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>wq :wq<CR>
+nnoremap <Leader>wqa :wqa<CR>

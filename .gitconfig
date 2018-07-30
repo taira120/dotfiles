@@ -3,7 +3,7 @@
 [alias]
   a = add
   s = status
-  c = commit -m
+  c = commit
   co = checkout
   cob = checkout -b
   com = checkout master
@@ -12,6 +12,7 @@
   df = diff
   p = push
   pl = pull
+  plm = pull origin master
 [user]
   name = taira120
   email = taira1999120@gmail.com

@@ -49,3 +49,18 @@ repo = 'zchee/deoplete-clang'
 
 [[plugins]]
 repo = 'Shougo/neco-syntax'
+
+[[plugins]]
+repo = 'slim-template/vim-slim'
+
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+repo = 'peitalin/vim-jsx-typescript'
+
