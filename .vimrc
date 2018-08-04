@@ -85,6 +85,45 @@ let g:deoplete#sources#clang#clang_header  = '/usr/local/Cellar/llvm/6.0.0/lib/c
 runtime macros/matchit.vim
 
 " --------------------------------
+" vimtex
+" --------------------------------
+let g:tex_flavor = "platex2e"
+
+let g:vimtex_latexmk_enabled = 1
+let g:vimtex_latexmk_options = '-pdfdvi'
+let g:vimtex_view_method = 'general'
+let g:vimtex_view_general_viewer
+      \ = '/Applications/Skim.app/Contents/SharedSupport/displayline'
+let g:vimtex_view_general_options = '-r @line @pdf @tex'
+let g:vimtex_compiler_callback_hooks = ['UpdateSkim']
+function! UpdateSkim(status)
+  if !a:status | return | endif
+
+  let l:out = b:vimtex.out()
+  let l:tex = expand('%:p')
+  let l:cmd = [g:vimtex_view_general_viewer, '-r']
+  if !empty(system('pgrep Skim'))
+    call extend(l:cmd, ['-g'])
+  endif
+  if has('nvim')
+    call jobstart(l:cmd + [line('.'), l:out, l:tex])
+  elseif has('job')
+    call job_start(l:cmd + [line('.'), l:out, l:tex])
+  else
+    call system(join(l:cmd + [line('.'), shellescape(l:out), shellescape(l:tex)], ' '))
+  endif
+endfunction
+
+let g:vimtex_latexmk_continuous = 1
+let g:vimtex_latexmk_background = 1
+let g:vimtex_latexmk_callback = 1
+
+let g:vimtex_toc_split_pos = "topleft"
+let g:vimtex_toc_width = 10
+
+" let g:vimtex_build_dir = './compiled_tex/'
+
+" --------------------------------
 " 基本設定
 " --------------------------------
 " set lang to English
@@ -134,7 +173,11 @@ autocmd BufRead,BufNewFile *.vue set filetype=html
 autocmd BufRead,BufNewFile *.schema set filetype=ruby
 autocmd BufRead,BufNewFile *.ruby set filetype=ruby
 autocmd BufRead,BufNewFile *.ts set filetype=javascript
-autocmd BufRead,BufNewFile *.tsx,*.jsx set filetype=typescript.jsx
+autocmd BufRead,BufNewFile *.dart set filetype=dart
+autocmd BufRead,BufNewFile *.c set filetype=c
+autocmd BufRead,BufNewFile *.tex set filetype=tex
+autocmd BufRead,BufNewFile *.slim set filetype=slim
+autocmd BufRead,BufNewFile *.jl set filetype=julia
 
 " --------------------------------
 " key map

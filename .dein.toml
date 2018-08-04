@@ -30,12 +30,15 @@ repo = 'kana/vim-textobj-user'
 
 [[plugins]]
 repo = 'nelstrom/vim-textobj-rubyblock'
+on_ft = ['ruby']
 
 [[plugins]]
 repo = 'JuliaEditorSupport/julia-vim'
+on_fy = ['julia']
 
 [[plugins]]
 repo = 'dart-lang/dart-vim-plugin'
+on_ft = ['dart']
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
@@ -46,12 +49,14 @@ on_i = 1
 
 [[plugins]]
 repo = 'zchee/deoplete-clang'
+on_ft = ['c']
 
 [[plugins]]
 repo = 'Shougo/neco-syntax'
 
 [[plugins]]
 repo = 'slim-template/vim-slim'
+on_ft = ['slim']
 
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
@@ -59,8 +64,6 @@ repo = 'bronson/vim-trailing-whitespace'
 [[plugins]]
 repo = 'editorconfig/editorconfig-vim'
 
-
 [[plugins]]
-repo = 'leafgarland/typescript-vim'
-repo = 'peitalin/vim-jsx-typescript'
-
+repo = 'lervag/vimtex'
+on_ft = ['tex']

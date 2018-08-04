@@ -10,3 +10,4 @@ ln -sf ~/dotfiles/.gitignore_global ~/.gitignore_global
 ln -sf ~/dotfiles/.dein.toml ~/.dein.toml
 ln -sf ~/dotfiles/.dein_lazy.toml ~/.dein_lazy.toml
 ln -sf ~/dotfiles/.editorconfig ~/.editorconfig
+ln -sf ~/dotfiles/.latexmkrc ~/.latexmkrc
