@@ -21,8 +21,6 @@ bindkey -v
 # alias #
 #########
 alias v="nvim"
-alias g="git"
-alias gp="g push"
 alias t="tmux"
 alias y="yarn"
 alias dcres="dc down && dc up"
@@ -33,6 +31,11 @@ alias j="/Applications/Julia-0.6.app/Contents/Resources/julia/bin/julia"
 alias ras="ssh pi@192.168.100.10"
 alias jn="jupyter notebook"
 alias mr="cd ../build && make run && cd ../ruby"
+
+# git
+alias g="git"
+alias gp="g push"
+alias gpom="g pull origin master"
 
 # source
 alias soen="source ./env.sh"
