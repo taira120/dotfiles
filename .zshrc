@@ -68,8 +68,7 @@ alias cdn="cd ~/workspace/twogate/nomad/server && soen"
 alias cdr="cd ~/workspace/cho_kure_web"
 alias cds="cd ~/workspace/twogate/smatch/server && soen"
 alias cdi="cd ~/workspace/inoken"
-alias cdk="cd ~/workspace/kure_open_college_network_hp"
-alias cdt="cd ~/workspace/tsukuba/aoj"
+alias cdin="cd ~/workspace/twogate/inspe/app/ && soen"
 
 ################
 # Powerlevel9k #
