@@ -8,6 +8,7 @@
   cob = checkout -b
   com = checkout master
   cof = checkout feature/dev
+  cod = checkout develop
   br = branch
   df = diff
   p = push

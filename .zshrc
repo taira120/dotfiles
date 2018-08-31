@@ -61,6 +61,7 @@ alias ruba="rubocop --auto-correct"
 alias rid="rails ridgepole:dry"
 alias rida="rails ridgepole:apply"
 alias rap="rails assets:precompile"
+alias rr="rails restart"
 alias gr="grep --exclude-dir=tmp --exclude-dir=log --exclude-dir=public"
 
 # cd

@@ -87,10 +87,17 @@ runtime macros/matchit.vim
 " --------------------------------
 " vimtex
 " --------------------------------
-let g:tex_flavor = "platex2e"
+let g:tex_flavor = "latex"
 
 let g:vimtex_latexmk_enabled = 1
-let g:vimtex_latexmk_options = '-pdfdvi'
+let g:vimtex_compiler_latexmk = {
+      \ 'backend' : 'nvim',
+      \ 'background' : 1,
+      \ 'callback' : 1,
+      \ 'continuous' : 1,
+      \ 'executable' : 'latexmk',
+      \}
+
 let g:vimtex_view_method = 'general'
 let g:vimtex_view_general_viewer
       \ = '/Applications/Skim.app/Contents/SharedSupport/displayline'
@@ -113,10 +120,6 @@ function! UpdateSkim(status)
     call system(join(l:cmd + [line('.'), shellescape(l:out), shellescape(l:tex)], ' '))
   endif
 endfunction
-
-let g:vimtex_latexmk_continuous = 1
-let g:vimtex_latexmk_background = 1
-let g:vimtex_latexmk_callback = 1
 
 let g:vimtex_toc_split_pos = "topleft"
 let g:vimtex_toc_width = 10
@@ -214,5 +217,3 @@ nnoremap <CR> o<ESC>
 nnoremap == gg=G
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
-nnoremap <Leader>wq :wq<CR>
-nnoremap <Leader>wqa :wqa<CR>
