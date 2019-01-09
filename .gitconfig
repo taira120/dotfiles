@@ -2,7 +2,7 @@
 	default = current
 [alias]
   a = add
-  s = status
+  s = stash
   c = commit
   co = checkout
   cob = checkout -b
@@ -13,7 +13,6 @@
   df = diff
   p = push
   pl = pull
-  plm = pull origin master
 [user]
   name = taira120
   email = taira1999120@gmail.com
