@@ -168,6 +168,10 @@ set tabstop=2 shiftwidth=2 softtabstop=2
 "バックスペースを有効化"
 set backspace=indent,eol,start
 
+" open quickfix-window automatically
+autocmd QuickFixCmdPost *grep* cwindow
+
+
 " ファイル形式の検出の有効化する
 " ファイル形式別プラグインのロードを有効化する
 " ファイル形式別インデントのロードを有効化する
@@ -214,6 +218,7 @@ nnoremap : ;
 nnoremap <S-h> <C-0>
 nnoremap <S-l> $
 nnoremap <CR> o<ESC>
+nnoremap <C-CR> o<ESC>
 nnoremap == gg=G
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
