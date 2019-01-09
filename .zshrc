@@ -1,4 +1,4 @@
-export PATH="/usr/local/opt/llvm/bin:/usr/local/opt/python/libexec/bin:/Users/taira/.rbenv/bin:/Users/taira/.yarn/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/taira/.pyenv/shims:/Users/taira/.nimble/bin:/Users/taira/Library/Python/2.7/bin:/Users/taira/dotfiles/.tmux/bin:/usr/local/Cellar/openvpn/2.4.4/sbin:/Library/TeX/texbin"
+export PATH="/Users/taira/.pyenv/shims:/usr/local/opt/llvm/bin:/Users/taira/.rbenv/bin:/Users/taira/.yarn/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/taira/.nimble/bin:/Users/taira/Library/Python/2.7/bin:/Users/taira/dotfiles/.tmux/bin:/usr/local/Cellar/openvpn/2.4.4/sbin:/Library/TeX/texbin"
 eval "$(rbenv init -)"
 export XDG_CONFIG_HOME=$HOME/.config
 
@@ -27,7 +27,7 @@ alias dcres="dc down && dc up"
 alias vz="v ~/.zshrc"
 alias vv="v ~/.vimrc"
 alias n="nim c -r"
-alias j="/Applications/Julia-0.6.app/Contents/Resources/julia/bin/julia"
+alias j="/Applications/Julia-0.7.app/Contents/Resources/julia/bin/julia"
 alias ras="ssh pi@192.168.100.10"
 alias jn="jupyter notebook"
 alias mr="cd ../build && make run && cd ../ruby"
@@ -35,7 +35,6 @@ alias mr="cd ../build && make run && cd ../ruby"
 # git
 alias g="git"
 alias gp="g push"
-alias gpom="g pull origin master"
 
 # source
 alias soen="source ./env.sh"
@@ -62,7 +61,7 @@ alias rid="rails ridgepole:dry"
 alias rida="rails ridgepole:apply"
 alias rap="rails assets:precompile"
 alias rr="rails restart"
-alias gr="grep --exclude-dir=tmp --exclude-dir=log --exclude-dir=public"
+alias gr="grep --exclude-dir=tmp --exclude-dir=log --exclude-dir=public --exclude-dir=coverage -rn"
 
 # cd
 alias cdn="cd ~/workspace/twogate/nomad/server && soen"
@@ -70,6 +69,7 @@ alias cdr="cd ~/workspace/cho_kure_web"
 alias cds="cd ~/workspace/twogate/smatch/server && soen"
 alias cdi="cd ~/workspace/inoken"
 alias cdin="cd ~/workspace/twogate/inspe/app/ && soen"
+alias cdru="cd ~/workspace/twogate/ruggers/api && source nfs.env.sh"
 
 ################
 # Powerlevel9k #
