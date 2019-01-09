@@ -190,7 +190,7 @@ autocmd BufRead,BufNewFile *.jl set filetype=julia
 " key map
 " --------------------------------
 inoremap <C-j> <Down>
-inoremap <C-k> <C-o>k
+inoremap <C-k> <Up>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 inoremap <C-f> <Delete>
@@ -210,15 +210,15 @@ nnoremap sj <C-w>j
 nnoremap sk <C-w>k
 nnoremap sl <C-w>l
 nnoremap sh <C-w>h
-nnoremap <C-l>   :tabnext<CR>
+nnoremap <C-l> :tabnext<CR>
 nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-w> :tabclose<CR>
 nnoremap ; :
 nnoremap : ;
 nnoremap <S-h> <C-0>
 nnoremap <S-l> $
-nnoremap <CR> o<ESC>
 nnoremap <C-CR> o<ESC>
 nnoremap == gg=G
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
+nnoremap <Leader>a :qa<CR>
