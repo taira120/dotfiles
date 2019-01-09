@@ -165,7 +165,7 @@ set autoindent
 
 set tabstop=2 shiftwidth=2 softtabstop=2
 
-"バックスペースを有効化"
+" バックスペースを有効化
 set backspace=indent,eol,start
 
 " open quickfix-window automatically
