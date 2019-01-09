@@ -179,6 +179,7 @@ filetype plugin indent on
 autocmd BufRead,BufNewFile *.vue set filetype=html
 autocmd BufRead,BufNewFile *.schema set filetype=ruby
 autocmd BufRead,BufNewFile *.ruby set filetype=ruby
+autocmd BufRead,BufNewFile *.thor set filetype=ruby
 autocmd BufRead,BufNewFile *.ts set filetype=javascript
 autocmd BufRead,BufNewFile *.dart set filetype=dart
 autocmd BufRead,BufNewFile *.c set filetype=c
