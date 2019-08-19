@@ -1,0 +1,21 @@
+[push]
+  default = current
+[alias]
+  a = add
+  s = stash
+  c = commit
+  co = checkout
+  cob = checkout -b
+  com = checkout master
+  cof = checkout feature/dev
+  cod = checkout develop
+  br = branch
+  df = diff
+  p = push
+  pl = pull
+[user]
+  name = taira120
+  email = taira1999120@gmail.com
+[core]
+  excludesfile = /Users/taira/.gitignore_global
+  editor = nvim

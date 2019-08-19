@@ -1,0 +1,58 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]] # 自動で閉じる
+repo = 'tpope/vim-endwise'
+
+[[plugins]] # html
+repo = 'mattn/emmet-vim'
+
+[[plugins]] # show indent level
+repo = 'Yggdroot/indentLine'
+
+[[plugins]] # file system explorer
+repo = 'scrooloose/nerdtree'
+
+[[plugins]] # vim motion on speed
+repo = 'easymotion/vim-easymotion'
+
+[[plugins]]
+repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'kana/vim-textobj-user'
+
+[[plugins]]
+repo = 'nelstrom/vim-textobj-rubyblock'
+on_ft = ['ruby']
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+
+[[plugins]]
+repo = 'zchee/deoplete-clang'
+on_ft = ['c']
+
+[[plugins]]
+repo = 'Shougo/neco-syntax'
+
+[[plugins]]
+repo = 'slim-template/vim-slim'
+on_ft = ['slim']
+
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+
+[[plugins]]
+repo = 'lervag/vimtex'
+on_ft = ['tex']
+
+[[plugins]]
+repo = 'gko/vim-coloresque'
+
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = 'go'
