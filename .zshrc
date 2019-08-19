@@ -41,7 +41,7 @@ alias soen="source ./env.sh"
 alias sozh="source /Users/taira/.zshrc"
 
 # ls
-alias l="colorls -a -sd"
+alias l="colorls -a --sd"
 alias l1="l -1"
 alias ll="l -l"
 
@@ -61,7 +61,7 @@ alias rid="rails ridgepole:dry"
 alias rida="rails ridgepole:apply"
 alias rap="rails assets:precompile"
 alias rr="rails restart"
-alias gr="grep --exclude-dir=tmp --exclude-dir=log --exclude-dir=public --exclude-dir=coverage -rn"
+alias gr="grep --exclude-dir=tmp --exclude-dir=log --exclude-dir=public --exclude-dir=coverage --exclude-dir=node_modules -rn"
 
 # cd
 alias cdn="cd ~/workspace/twogate/nomad/server && soen"
@@ -74,24 +74,65 @@ alias cdru="cd ~/workspace/twogate/ruggers/api && source nfs.env.sh"
 ################
 # Powerlevel9k #
 ################
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME='powerlevel9k/powerlevel9k'
 POWERLEVEL9K_MODE='nerdfont-complete'
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
-POWERLEVEL9K_DISABLE_RPROMPT=true
-
-POWERLEVEL9K_TIME_FORMAT="%D{%m\/%d %H:%M}"
-POWERLEVEL9K_TIME_FOREGROUND='white'
-POWERLEVEL9K_TIME_BACKGROUND='background'
 
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_RPROMPT_ON_NEWLINE=false
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="\u25B8 "
+POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='\uf44a '
+ZLE_PROMPT_INDENT=1
 
+# left prompt
+cross() {
+  echo -n "%{%F{blue}%}✘ %{%F{red}%}✘ %{%F{yellow}%}✘"
+}
+POWERLEVEL9K_CUSTOM_LUNA_CROSS='cross'
+POWERLEVEL9K_CUSTOM_LUNA_CROSS_BACKGROUND='none'
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_luna_cross dir vcs)
 POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=''
-POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=''
+POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR=''
+POWERLEVEL9K_WHITESPACE_BETWEEN_LEFT_SEGMENTS=' '
 
-source ~/notifyre.sh
+# dir
+POWERLEVEL9K_FOLDER_ICON='\uf07b'
+POWERLEVEL9K_HOME_ICON='\uf015'
+POWERLEVEL9K_HOME_SUB_ICON='\uf07c'
+
+POWERLEVEL9K_DIR_ETC_BACKGROUND='blue'
+POWERLEVEL9K_DIR_ETC_FOREGROUND='black'
+POWERLEVEL9K_DIR_HOME_BACKGROUND='blue'
+POWERLEVEL9K_DIR_HOME_FOREGROUND='black'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='blue'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='black'
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='blue'
+POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='black'
+
+# vcs
+POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-untracked git-stash git-aheadbehind git-remotebranch git-tagname)
+POWERLEVEL9K_VCS_GIT_ICON=''
+
+POWERLEVEL9K_SHOW_CHANGESET=true
+POWERLEVEL9K_HIDE_BRANCH_ICON=false
+POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
+
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND='green'
+POWERLEVEL9K_VCS_CLEAN_FOREGROUND='black'
+POWERLEVEL9K_VCS_UNTRACKED_ICON='\uf059'
+POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
+POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='black'
+POWERLEVEL9K_VCS_MODIFIED_ICON='\uf06a'
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow'
+POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='black'
+
+# right prompt
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
+POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=''
+POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR=''
+POWERLEVEL9K_WHITESPACE_BETWEEN_RIGHT_SEGMENTS=' '
+
+# time
+POWERLEVEL9K_TIME_FORMAT="%D{%H:%M} "
+POWERLEVEL9K_TIME_BACKGROUND='none'
+POWERLEVEL9K_TIME_FOREGROUND='white'
