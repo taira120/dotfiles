@@ -25,6 +25,9 @@ bindkey -v
 #########
 # alias #
 #########
+# cd
+source ~/dotfiles/cd.sh
+
 alias v="nvim"
 alias t="tmux"
 alias vz="v ~/.zshrc"
