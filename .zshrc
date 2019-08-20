@@ -4,7 +4,7 @@ export PATH="$PATH:/usr/local/go/bin"
 export GOPATH="$HOME/workspace/go"
 
 # Setting for Nvim
-export XDG_CONFIG_HOME="$HOME/dotfiles"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # Settings for zsh
 export ZSH="$HOME/.oh-my-zsh"
