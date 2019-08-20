@@ -1,6 +1,12 @@
-mkdir ~/workspace
-
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew install tmux
+brew install reattach-to-user-namespace
+brew install git
+brew install tig
+brew install neovim
+
+sudo gem install colorls
 
 # setup zsh with oh-my-zsh
 brew install zsh zsh-completions
@@ -11,18 +17,11 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 brew tap homebrew/cask-fonts
 brew cask install font-hack-nerd-font
 
-brew install tmux
-brew install reattach-to-user-namespace
-brew install git
-brew install tig
-brew install neovim
-
-sudo gem install colorls
-
 # install python for nvim
 brew install pyenv
 pyenv install 2.7.0
 pyenv install 3.7.4
 
-mkdir ~/.config/
-mkdir ~/.config/colorls
+mkdir ~/workspace
+
+source ~/dotfiles/link.sh
