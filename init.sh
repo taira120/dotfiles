@@ -18,3 +18,11 @@ brew install tig
 brew install neovim
 
 sudo gem install colorls
+
+# install python for nvim
+brew install pyenv
+pyenv install 2.7.0
+pyenv install 3.7.4
+
+mkdir ~/.config/
+mkdir ~/.config/colorls
