@@ -9,6 +9,8 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # Settings for zsh
 export ZSH="$HOME/.oh-my-zsh"
 plugins=(git)
+
+POWERLEVEL9K_MODE='nerdfont-complete'
 ZSH_THEME='powerlevel9k/powerlevel9k'
 source $ZSH/oh-my-zsh.sh
 
@@ -63,8 +65,6 @@ alias gr="grep --exclude-dir=tmp --exclude-dir=log --exclude-dir=public --exclud
 ################
 # Powerlevel9k #
 ################
-POWERLEVEL9K_MODE='nerdfont-complete'
-
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
