@@ -1,4 +1,4 @@
-export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:/usr/local/go/bin:$HOME/.local/bin"
 
 # Setting for Go
 export GOPATH="$HOME/workspace/go"
